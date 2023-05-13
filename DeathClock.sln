@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeathClock.Android", "DeathClock\DeathClock.Android\DeathClock.Android.csproj", "{34B89E28-A52D-4230-BDBC-266D69C39C27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeathClock", "DeathClock\DeathClock\DeathClock.csproj", "{C9C77279-35B8-4224-8DBF-D82FD0CDA470}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34B89E28-A52D-4230-BDBC-266D69C39C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B89E28-A52D-4230-BDBC-266D69C39C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B89E28-A52D-4230-BDBC-266D69C39C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B89E28-A52D-4230-BDBC-266D69C39C27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C77279-35B8-4224-8DBF-D82FD0CDA470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C77279-35B8-4224-8DBF-D82FD0CDA470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C77279-35B8-4224-8DBF-D82FD0CDA470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C77279-35B8-4224-8DBF-D82FD0CDA470}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB7CF44A-8EEC-4631-B64A-7E89BB057335}
+	EndGlobalSection
+EndGlobal
