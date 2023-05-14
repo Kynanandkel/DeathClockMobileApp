@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DeathClock"
+             x:Class="DeathClock.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:MainViewModel/>
+
+    </ContentPage.BindingContext>
+
+    <StackLayout Background="black">
+        <Grid ColumnDefinitions="3*,1*" BackgroundColor="Black" >
+            <Grid Grid.Column="0" RowDefinitions = "2*,400,1*"  Padding="5" >
+                <Grid Grid.Column="0" ColumnDefinitions="50,200" >
+                    <Button Grid.Column="0" Text="Config" Command="{Binding goToSettings}"/>
+
+                </Grid>
+            
+                <Grid  Grid.Row="1" Grid.Column="0" RowDefinitions="2*,2*" ColumnDefinitions="2*,2*,2*"  Padding="5">
+                    <Label Grid.Column="0" Grid.Row="0" VerticalOptions="CenterAndExpand" FontSize="Title" Text="{Binding TimeSpent}" BackgroundColor="Purple"/>
+                    <Label Grid.Column="0" Grid.Row="1" VerticalOptions="CenterAndExpand" FontSize="Title" Text="{Binding TimeLeft}" BackgroundColor="Purple"/>
+
+                
+                </Grid>
+                
+            
+
+
+
+            </Grid>
+            <StackLayout Grid.Column="1" Rotation="-90" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" ScaleX="5" Background="black" >
+                    
+                    <ProgressBar ProgressColor="Bisque" Progress="{Binding LifeProgress}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ScaleY="20" ></ProgressBar>
+
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
+
