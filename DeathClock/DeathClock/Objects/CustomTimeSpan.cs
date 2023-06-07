@@ -21,7 +21,7 @@ namespace DeathClock.Objects
 
             if (year)
             {
-                timeSpan = $"{((int)(time.TotalSeconds / SecondsInAYear))} Years \n";
+                timeSpan = $"   {((int)(time.TotalSeconds / SecondsInAYear))} Years \n";
 
                 TimeSpan newTimeSpan = new TimeSpan(0, 0, 0, (int)(time.TotalSeconds % SecondsInAYear));
                 time = newTimeSpan;
@@ -31,7 +31,7 @@ namespace DeathClock.Objects
             }
             if (month)
             {
-                timeSpan += $"{((int)(time.TotalSeconds / SecondsInAMonth))} Months \n";
+                timeSpan += $"   {((int)(time.TotalSeconds / SecondsInAMonth))} Months \n";
 
                 TimeSpan newTimeSpan = new TimeSpan(0, 0, 0, (int)(time.TotalSeconds % SecondsInAMonth));
                 time = newTimeSpan;
@@ -41,7 +41,7 @@ namespace DeathClock.Objects
             }
             if (week)
             {
-                timeSpan += $"{((int)(time.TotalSeconds / SecondsInAWeek))} Weeks \n";
+                timeSpan += $"   {((int)(time.TotalSeconds / SecondsInAWeek))} Weeks \n";
 
                 TimeSpan newTimeSpan = new TimeSpan(0, 0, 0, (int)(time.TotalSeconds % SecondsInAWeek));
                 time = newTimeSpan;
@@ -51,7 +51,7 @@ namespace DeathClock.Objects
             }
             if (day)
             {
-                timeSpan += $"{((int)(time.TotalSeconds / SecondsInADay))} Days \n";
+                timeSpan += $"   {((int)(time.TotalSeconds / SecondsInADay))} Days \n";
 
                 TimeSpan newTimeSpan = new TimeSpan(0, 0, 0, (int)(time.TotalSeconds % SecondsInADay));
                 time = newTimeSpan;
@@ -61,7 +61,7 @@ namespace DeathClock.Objects
             }
             if (hour)
             {
-                timeSpan += $"{((int)(time.TotalSeconds / SecondsInAnHour))} Hours \n";
+                timeSpan += $"   {((int)(time.TotalSeconds / SecondsInAnHour))} Hours \n";
 
                 TimeSpan newTimeSpan = new TimeSpan(0, 0, 0, (int)(time.TotalSeconds % SecondsInAnHour));
                 time = newTimeSpan;
@@ -71,7 +71,7 @@ namespace DeathClock.Objects
             }
             if (minute)
             {
-                timeSpan += $"{((int)(time.TotalSeconds / SecondsInAMinute))} Minutes \n";
+                timeSpan += $"   {((int)(time.TotalSeconds / SecondsInAMinute))} Minutes \n";
 
                 TimeSpan newTimeSpan = new TimeSpan(0, 0, 0, (int)(time.TotalSeconds % SecondsInAMinute));
                 time = newTimeSpan;
@@ -81,7 +81,7 @@ namespace DeathClock.Objects
             }
             if (second)
             {
-                timeSpan += $"{(int)(time.TotalSeconds)} Seconds";
+                timeSpan += $"   {(int)(time.TotalSeconds)} Seconds";
 
                 TimeSpan newTimeSpan = new TimeSpan(0, 0, 0, (int)(time.TotalSeconds % SecondsInAnHour));
                 time = newTimeSpan;

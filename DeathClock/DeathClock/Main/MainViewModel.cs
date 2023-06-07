@@ -39,8 +39,8 @@ namespace DeathClock.Main
                 // if the file doesnt exists we set some defauts based on my age until a settings file is made by the configuartion
                 configFile = new ConfigFile()
                 {
-                    birthDay = new DateTime(1998, 3, 13),
-                    ageOfDeath = 85,
+                    _birthDay = new DateTime(1998, 3, 13),
+                    _ageOfDeath = 85,
                     _year = true,
                     _month = true,
                     _week = true,
@@ -99,6 +99,8 @@ namespace DeathClock.Main
             //local variable that stores the percent of the life the user has spent
             float percentLifeLeft;
 
+            _renderer = new Renderers.LoadingBarRenderer();
+
             //Timer to run the calculation every Interval 
             Device.StartTimer(Interval, () =>
             {
@@ -110,8 +112,8 @@ namespace DeathClock.Main
                 TimeSpanLeft = configFile._dateOfDeath - CurrentTime;
 
                 //formtaing the time left and time lived into the desired format
-                _timeLeft = FormatTimeSpan(TimeSpanLeft, configFile._year, configFile._month, configFile._week, configFile._day, configFile._hour, configFile._minute, configFile._second);
-                _timeSpent = FormatTimeSpan(TimeSpanSpent, configFile._year, configFile._month, configFile._week, configFile._day, configFile._hour, configFile._minute, configFile._second);
+                _timeLeft = "--Time Left--\n" + FormatTimeSpan(TimeSpanLeft, configFile._year, configFile._month, configFile._week, configFile._day, configFile._hour, configFile._minute, configFile._second);
+                _timeSpent = "--Time Spent--\n" +  FormatTimeSpan(TimeSpanSpent, configFile._year, configFile._month, configFile._week, configFile._day, configFile._hour, configFile._minute, configFile._second);
 
                 percentLifeLeft = (float) (TimeSpanSpent.TotalSeconds / ((TimeSpanSpent.TotalSeconds + TimeSpanLeft.TotalSeconds) / 100)) ;
 

@@ -5,6 +5,10 @@ using Xamarin.Forms;
 
 namespace DeathClock.CustomContols
 {
+
+    //overidden class which allows me to call the Pain surface method
+    // from skia in my View model classes instead of the code behind classes
+    // using a tutorial found here https://www.codeproject.com/Articles/5247780/Xamarin-SKIASharp-Guide-to-MVVM
     public class SkRenderView : SKCanvasView
     {
         public static readonly BindableProperty RendererProperty = BindableProperty.Create(

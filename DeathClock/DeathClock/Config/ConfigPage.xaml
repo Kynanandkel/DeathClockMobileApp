@@ -9,29 +9,29 @@
          <Grid RowDefinitions="1*,2*,2*,2*,2*,2*,2*,2*,2*,2*,2*" ColumnDefinitions="1*,7*" Padding="15">
              <Label Text="Enter date of birth" Grid.ColumnSpan="2" VerticalOptions="End"/>
              <DatePicker Grid.ColumnSpan="2" MinimumDate="1/1/1900"
-                         MaximumDate="1/1/3000" Grid.Row="1" Date="{Binding BirthDay}"/>
+                         MaximumDate="1/1/3000" Grid.Row="1" Date="{Binding _vmBirthDay}"/>
 
-             <Editor Placeholder="enter age here" Grid.ColumnSpan="2" Grid.Row="2" Keyboard="Telephone" Text="{Binding AgeOfDeath}" />
+             <Editor Placeholder="enter age here" Grid.ColumnSpan="2" Grid.Row="2" Keyboard="Telephone" Text="{Binding _vmAgeOfDeath}" />
 
-             <CheckBox Grid.Row="3" Color="White" IsChecked="{Binding Year}"/>
+             <CheckBox Grid.Row="3" Color="White" IsChecked="{Binding _vmYear}"/>
              <Label Text="Year" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
 
-             <CheckBox Grid.Row="4" Color="White" IsChecked="{Binding Month}"/>
+             <CheckBox Grid.Row="4" Color="White" IsChecked="{Binding _vmMonth}"/>
              <Label Text="Month" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
 
-             <CheckBox Grid.Row="5" Color="White" IsChecked="{Binding Week}"/>
+             <CheckBox Grid.Row="5" Color="White" IsChecked="{Binding _vmWeek}"/>
              <Label Text="Week" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
 
-             <CheckBox Grid.Row="6" Color="White" IsChecked="{Binding Day}"/>
+             <CheckBox Grid.Row="6" Color="White" IsChecked="{Binding _vmDay}"/>
              <Label Text="Day" Grid.Row="6" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
 
-             <CheckBox Grid.Row="7" Color="White" IsChecked="{Binding Hour}"/>
+             <CheckBox Grid.Row="7" Color="White" IsChecked="{Binding _vmHour}"/>
              <Label Text="Hour" Grid.Row="7" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
 
-             <CheckBox Grid.Row="8" Color="White" IsChecked="{Binding Minute}"/>
+             <CheckBox Grid.Row="8" Color="White" IsChecked="{Binding _vmMinute}"/>
              <Label Text="Minute" Grid.Row="8" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
               
-             <CheckBox Grid.Row="9" Color="White" IsChecked="{Binding Second}"/>
+             <CheckBox Grid.Row="9" Color="White" IsChecked="{Binding _vmSecond}"/>
              <Label Text="Second" Grid.Row="9" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
 
              <Button Text="Save Configs" Grid.ColumnSpan="2" Grid.Row="10" Command="{Binding SaveConfig}"/>

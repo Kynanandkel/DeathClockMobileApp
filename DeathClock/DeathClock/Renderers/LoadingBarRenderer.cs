@@ -5,7 +5,11 @@ using SkiaSharp.Views.Forms;
 
 namespace DeathClock.Renderers
 {
-	public class LoadingBarRenderer : IRenderer
+
+    // a renderer object that renders a specific drawing when passed to the RenderView control
+    // this allows me to use skia sharp with 0 code behind
+    // tutorial for this found here https://www.codeproject.com/Articles/5247780/Xamarin-SKIASharp-Guide-to-MVVM
+    public class LoadingBarRenderer : IRenderer
 	{
         
 
@@ -43,7 +47,11 @@ namespace DeathClock.Renderers
             using (SKPath path = new SKPath())
             {
                 int lineWidth = 10;
+
+                // the margin of the loading bar from all sides
                 int border = 40 ;
+
+                // this draws the loading bar onto the canvas area
                 path.MoveTo(new SKPoint(border, border - lineWidth));
 
                 path.LineTo(new SKPoint(info.Width - border, border - lineWidth)); //border
@@ -67,12 +75,12 @@ namespace DeathClock.Renderers
                 {
                     Style = SKPaintStyle.Fill,
                     Color = SKColors.LightGray,
-                    StrokeWidth = 10
+                    StrokeWidth = 15
 
                 };
 
                 
-
+                //this figures out how long the line in the canvas is and then draws the circle to indicate progres 
                 float offset = 40;
 
                 float HeightOfLoadingBar = (float)(info.Height - border*2);
@@ -81,7 +89,7 @@ namespace DeathClock.Renderers
 
                 float positionOfCircle = (float)LoadinBarSplitByOnePercent * (float)Percentage + offset ;
 
-                canvas.DrawCircle(info.Width/2,positionOfCircle, 10,GrayLinePaint);
+                canvas.DrawCircle(info.Width/2,positionOfCircle, 20,GrayLinePaint);
             }
         }
 
