@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DeathClock.Config"
+    x:Class="DeathClock.Config.ConfigPage">
+    
+     <ScrollView>
+         <Grid RowDefinitions="1*,2*,2*,2*,2*,2*,2*,2*,2*,2*,2*" ColumnDefinitions="1*,7*" Padding="15">
+             <Label Text="Enter date of birth" Grid.ColumnSpan="2" VerticalOptions="End"/>
+             <DatePicker Grid.ColumnSpan="2" MinimumDate="1/1/1900"
+                         MaximumDate="1/1/3000" Grid.Row="1" Date="{Binding BirthDay}"/>
+
+             <Editor Placeholder="enter age here" Grid.ColumnSpan="2" Grid.Row="2" Keyboard="Telephone" Text="{Binding AgeOfDeath}" />
+
+             <CheckBox Grid.Row="3" Color="White" IsChecked="{Binding Year}"/>
+             <Label Text="Year" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+
+             <CheckBox Grid.Row="4" Color="White" IsChecked="{Binding Month}"/>
+             <Label Text="Month" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+
+             <CheckBox Grid.Row="5" Color="White" IsChecked="{Binding Week}"/>
+             <Label Text="Week" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+
+             <CheckBox Grid.Row="6" Color="White" IsChecked="{Binding Day}"/>
+             <Label Text="Day" Grid.Row="6" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+
+             <CheckBox Grid.Row="7" Color="White" IsChecked="{Binding Hour}"/>
+             <Label Text="Hour" Grid.Row="7" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+
+             <CheckBox Grid.Row="8" Color="White" IsChecked="{Binding Minute}"/>
+             <Label Text="Minute" Grid.Row="8" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+              
+             <CheckBox Grid.Row="9" Color="White" IsChecked="{Binding Second}"/>
+             <Label Text="Second" Grid.Row="9" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+
+             <Button Text="Save Configs" Grid.ColumnSpan="2" Grid.Row="10" Command="{Binding SaveConfig}"/>
+
+        </Grid>
+     </ScrollView>
+</ContentPage>
+

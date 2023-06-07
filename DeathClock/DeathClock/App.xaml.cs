@@ -10,7 +10,7 @@ namespace DeathClock
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Main.MainPage());
         }
 
         protected override void OnStart ()

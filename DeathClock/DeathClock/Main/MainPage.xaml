@@ -1,41 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DeathClock"
-             x:Class="DeathClock.MainPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"       
+             xmlns:ctrl="clr-namespace:DeathClock.CustomContols"
+             xmlns:renderer="clr-namespace:DeathClock.Renderers"
+             x:Class="DeathClock.Main.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             >
 
-    <ContentPage.BindingContext>
-        <local:MainViewModel/>
-
-    </ContentPage.BindingContext>
-
-    <StackLayout Background="black">
-        <Grid ColumnDefinitions="3*,1*" BackgroundColor="Black" >
-            <Grid Grid.Column="0" RowDefinitions = "2*,400,1*"  Padding="5" >
-                <Grid Grid.Column="0" ColumnDefinitions="50,200" >
-                    <Button Grid.Column="0" Text="Config" Command="{Binding goToSettings}"/>
-
-                </Grid>
-            
-                <Grid  Grid.Row="1" Grid.Column="0" RowDefinitions="2*,2*" ColumnDefinitions="2*,2*,2*"  Padding="5">
-                    <Label Grid.Column="0" Grid.Row="0" VerticalOptions="CenterAndExpand" FontSize="Title" Text="{Binding TimeSpent}" BackgroundColor="Purple"/>
-                    <Label Grid.Column="0" Grid.Row="1" VerticalOptions="CenterAndExpand" FontSize="Title" Text="{Binding TimeLeft}" BackgroundColor="Purple"/>
-
-                
-                </Grid>
-                
-            
+   
 
 
+    <Grid RowDefinitions="2*,10*,10*" ColumnDefinitions="8*,2*" Padding="5" Background="#252525">
 
-            </Grid>
-            <StackLayout Grid.Column="1" Rotation="-90" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" ScaleX="5" Background="black" >
+        
+        <Button Grid.Column="0" Text="Config" BackgroundColor="#4444" TextColor="#b2b2b2" HorizontalOptions="Start" WidthRequest="70" Command="{Binding goToSettings}"/>
+
+           
+        
+        <Label Grid.Column="0" Grid.Row="1" TextColor="#b2b2b2" VerticalOptions="CenterAndExpand" FontSize="Title" Text="{Binding TimeSpent}" HorizontalOptions="Center"/>
+
+        
+        <Label Grid.Column="0" Grid.Row="2" TextColor="#b2b2b2" VerticalOptions="CenterAndExpand" FontSize="Title" Text="{Binding TimeLeft}" HorizontalOptions="Center"/>       
                     
-                    <ProgressBar ProgressColor="Bisque" Progress="{Binding LifeProgress}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ScaleY="20" ></ProgressBar>
 
-            </StackLayout>
-        </Grid>
-    </StackLayout>
+              
+        
+            
+
+        <ctrl:SkRenderView Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Renderer="{Binding renderer}"  />
+
+    </Grid>
+    
 
 </ContentPage>
 
