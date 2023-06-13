@@ -11,17 +11,29 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.3" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Main\" />
     <None Remove="Config\" />
     <None Remove="Objects\" />
+    <None Remove="Mono.Android" />
+    <None Remove="SkiaSharp.Views.Forms" />
+    <None Remove="CustomControls\" />
+    <None Remove="VerticleLoadingBar\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Main\" />
     <Folder Include="Config\" />
     <Folder Include="Objects\" />
+    <Folder Include="CustomControls\" />
+    <Folder Include="VerticleLoadingBar\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\Library\Frameworks\Xamarin.Android.framework\Versions\13.1.0.1\lib\xamarin.android\xbuild-frameworks\MonoAndroid\v13.0\Mono.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
